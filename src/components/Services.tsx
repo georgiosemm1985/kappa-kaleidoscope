@@ -12,6 +12,7 @@ import {
   ArrowRight,
   Sparkles
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 
 const Services = () => {
@@ -49,7 +50,8 @@ const Services = () => {
       description: "Custom websites with stunning visuals and seamless functionality that engage your audience and drive results.",
       features: ["Responsive Design", "Custom CMS", "E-commerce Solutions", "Performance Optimization"],
       gradient: "from-blue-500 to-indigo-600",
-      hoverGradient: "from-blue-600 to-indigo-700"
+      hoverGradient: "from-blue-600 to-indigo-700",
+      link: "/services/web-design"
     },
     {
       icon: <LineChart className="h-12 w-12 text-white group-hover:text-kappa-blue transition-colors duration-300" />,
@@ -57,7 +59,8 @@ const Services = () => {
       description: "Strategic marketing campaigns that increase visibility, drive quality traffic, and generate leads.",
       features: ["Content Strategy", "Email Marketing", "Social Media", "PPC Campaigns"],
       gradient: "from-purple-500 to-pink-500",
-      hoverGradient: "from-purple-600 to-pink-600"
+      hoverGradient: "from-purple-600 to-pink-600",
+      link: "/services"
     },
     {
       icon: <Search className="h-12 w-12 text-white group-hover:text-kappa-blue transition-colors duration-300" />,
@@ -65,7 +68,8 @@ const Services = () => {
       description: "Comprehensive SEO strategies that improve your search rankings and drive organic traffic to your website.",
       features: ["Keyword Research", "On-Page SEO", "Technical SEO", "Link Building"],
       gradient: "from-green-500 to-teal-500",
-      hoverGradient: "from-green-600 to-teal-600"
+      hoverGradient: "from-green-600 to-teal-600",
+      link: "/services"
     },
     {
       icon: <ShoppingCart className="h-12 w-12 text-white group-hover:text-kappa-blue transition-colors duration-300" />,
@@ -73,7 +77,8 @@ const Services = () => {
       description: "Custom online stores that provide seamless shopping experiences and maximize conversions.",
       features: ["Product Management", "Payment Integration", "Inventory Systems", "Customer Accounts"],
       gradient: "from-orange-500 to-amber-500",
-      hoverGradient: "from-orange-600 to-amber-600"
+      hoverGradient: "from-orange-600 to-amber-600",
+      link: "/services"
     },
     {
       icon: <Smartphone className="h-12 w-12 text-white group-hover:text-kappa-blue transition-colors duration-300" />,
@@ -81,7 +86,8 @@ const Services = () => {
       description: "Native and cross-platform mobile applications that extend your digital presence to mobile users.",
       features: ["iOS & Android", "UX Design", "API Integration", "App Store Optimization"],
       gradient: "from-cyan-500 to-blue-500",
-      hoverGradient: "from-cyan-600 to-blue-600"
+      hoverGradient: "from-cyan-600 to-blue-600",
+      link: "/services"
     },
     {
       icon: <BarChart4 className="h-12 w-12 text-white group-hover:text-kappa-blue transition-colors duration-300" />,
@@ -89,7 +95,8 @@ const Services = () => {
       description: "In-depth analytics and custom reporting to track performance and inform strategic decisions.",
       features: ["Custom Dashboards", "Conversion Tracking", "User Behavior", "ROI Reporting"],
       gradient: "from-violet-500 to-fuchsia-500",
-      hoverGradient: "from-violet-600 to-fuchsia-600"
+      hoverGradient: "from-violet-600 to-fuchsia-600",
+      link: "/services"
     }
   ];
   
@@ -150,10 +157,10 @@ const Services = () => {
                     </li>
                   ))}
                 </ul>
-                <div className="mt-6 pt-4 border-t border-gray-100 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <Link to={service.link} className="mt-6 pt-4 border-t border-gray-100 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <span className="font-medium text-kappa-blue">Learn More</span>
                   <ArrowRight className="h-5 w-5 text-kappa-blue" />
-                </div>
+                </Link>
               </div>
               
               {/* Service accent shapes */}
@@ -178,9 +185,9 @@ const Services = () => {
                 </p>
               </div>
               <div>
-                <a href="#contact" className="inline-block px-8 py-4 bg-white text-kappa-blue rounded-lg font-bold hover:bg-kappa-lightblue transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                <Link to="/contact" className="inline-block px-8 py-4 bg-white text-kappa-blue rounded-lg font-bold hover:bg-kappa-lightblue transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                   Get Started Now
-                </a>
+                </Link>
               </div>
             </div>
           </div>
