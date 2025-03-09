@@ -2,8 +2,24 @@
 import { useState, useEffect } from 'react';
 import { Send, Mail, Phone, MapPin } from 'lucide-react';
 
+// Define proper types for the form data and errors
+interface FormData {
+  name: string;
+  email: string;
+  phone: string;
+  service: string;
+  message: string;
+}
+
+interface FormErrors {
+  name?: string;
+  email?: string;
+  service?: string;
+  message?: string;
+}
+
 const Contact = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
     phone: '',
@@ -11,7 +27,7 @@ const Contact = () => {
     message: ''
   });
   
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   
@@ -39,7 +55,7 @@ const Contact = () => {
     };
   }, []);
   
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -48,7 +64,7 @@ const Contact = () => {
   };
   
   const validateForm = () => {
-    const newErrors = {};
+    const newErrors: FormErrors = {};
     
     if (!formData.name.trim()) {
       newErrors.name = "Name is required";
@@ -72,7 +88,7 @@ const Contact = () => {
     return Object.keys(newErrors).length === 0;
   };
   
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
     
     if (validateForm()) {

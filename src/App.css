@@ -29,3 +29,17 @@
 .dark .text-glow {
   text-shadow: 0 0 10px rgba(61, 90, 254, 0.3);
 }
+
+/* Dark mode title improvements */
+.dark h1, 
+.dark h2, 
+.dark h3, 
+.dark h4, 
+.dark h5, 
+.dark h6 {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.dark .text-gray-600 {
+  color: rgba(215, 220, 236, 0.8);
+}
