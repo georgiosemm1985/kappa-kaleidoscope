@@ -65,8 +65,10 @@ const AboutUsPage = () => {
             </div>
           </div>
         </header>
-        <About />
-        <Process />
+        <div className="bg-white">
+          <About />
+          <Process />
+        </div>
       </div>
       <Footer />
     </div>
