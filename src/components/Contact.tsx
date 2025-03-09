@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { Send, Mail, Phone, MapPin } from 'lucide-react';
+import { Send, Mail, MessageSquare } from 'lucide-react';
 
 // Define proper types for the form data and errors
 interface FormData {
@@ -122,16 +122,10 @@ const Contact = () => {
       link: "mailto:hello@kappadigital.co.uk"
     },
     {
-      icon: <Phone className="h-6 w-6 text-kappa-blue" />,
-      title: "Call Us",
+      icon: <MessageSquare className="h-6 w-6 text-kappa-blue" />,
+      title: "WhatsApp Us",
       info: "+44 (0) 20 1234 5678",
-      link: "tel:+442012345678"
-    },
-    {
-      icon: <MapPin className="h-6 w-6 text-kappa-blue" />,
-      title: "Visit Us",
-      info: "London, United Kingdom",
-      link: "#"
+      link: "https://wa.me/442012345678"
     }
   ];
   
