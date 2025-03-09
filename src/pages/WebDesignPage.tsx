@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { 
   Laptop, 
@@ -141,9 +140,7 @@ const WebDesignPage = () => {
     <div className="flex flex-col min-h-screen bg-kappa-dark-navy">
       <Navbar />
       <div className="pt-20 md:pt-24">
-        {/* Hero Section */}
         <header className="relative min-h-[60vh] flex items-center pt-16 overflow-hidden bg-kappa-dark-navy text-white">
-          {/* Background Elements */}
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute -top-20 -right-20 w-96 h-96 bg-kappa-accent/20 rounded-full blur-3xl opacity-70"></div>
             <div className="absolute top-1/3 -left-20 w-80 h-80 bg-kappa-blue/20 rounded-full blur-3xl opacity-60"></div>
@@ -152,11 +149,11 @@ const WebDesignPage = () => {
           
           <div className="container mx-auto px-6 max-w-7xl relative z-10">
             <div className="grid md:grid-cols-2 gap-10 items-center">
-              <div className="animate-on-scroll">
+              <div className="animate-on-scroll text-left">
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white text-sm font-medium mb-6">
                   <Laptop className="w-4 h-4 mr-2" /> Web Design & Development
                 </div>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
                   Transform Your <span className="bg-gradient-to-r from-blue-400 to-kappa-accent text-transparent bg-clip-text">Digital Presence</span>
                 </h1>
                 <p className="text-lg md:text-xl text-white/90 mb-8">
@@ -182,14 +179,13 @@ const WebDesignPage = () => {
           </div>
         </header>
 
-        {/* Platforms Section */}
         <section className="py-20 bg-gradient-to-b from-kappa-dark-navy to-kappa-dark-blue">
           <div className="container mx-auto px-6 max-w-7xl">
-            <div className="text-center mb-16 animate-on-scroll">
+            <div className="text-left mb-16 animate-on-scroll">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Building for <span className="text-kappa-accent">All Platforms</span>
               </h2>
-              <p className="text-lg text-white/80 max-w-3xl mx-auto">
+              <p className="text-lg text-white/80 max-w-3xl">
                 Our expertise spans across all major platforms, ensuring your digital presence is consistent and powerful wherever your users are.
               </p>
             </div>
@@ -198,7 +194,7 @@ const WebDesignPage = () => {
               {platforms.map((platform, index) => (
                 <div 
                   key={index} 
-                  className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl p-6 text-white hover:transform hover:scale-105 transition-all duration-300 animate-on-scroll"
+                  className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl p-6 text-left text-white hover:transform hover:scale-105 transition-all duration-300 animate-on-scroll"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="flex justify-center mb-4">
@@ -212,7 +208,6 @@ const WebDesignPage = () => {
           </div>
         </section>
 
-        {/* AI Integration Section */}
         <section className="py-20 bg-kappa-dark-blue relative overflow-hidden">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-0 left-0 w-full h-full bg-grid-pattern"></div>
@@ -227,7 +222,7 @@ const WebDesignPage = () => {
                   className="rounded-lg shadow-2xl border border-white/10"
                 />
               </div>
-              <div className="animate-on-scroll order-1 md:order-2">
+              <div className="animate-on-scroll order-1 md:order-2 text-left">
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-kappa-accent/20 text-kappa-accent text-sm font-medium mb-6">
                   <Brain className="w-4 h-4 mr-2" /> Next Generation Technology
                 </div>
@@ -263,17 +258,16 @@ const WebDesignPage = () => {
           </div>
         </section>
 
-        {/* Features Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-6 max-w-7xl">
-            <div className="text-center mb-16 animate-on-scroll">
+            <div className="text-left mb-16 animate-on-scroll">
               <div className="inline-flex items-center justify-center p-2 rounded-full bg-kappa-lightblue mb-4">
                 <Sparkles className="h-6 w-6 text-kappa-blue" />
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Powerful Features for <span className="text-kappa-blue">Modern Web Applications</span>
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              <p className="text-lg text-gray-600 max-w-3xl">
                 We combine cutting-edge technology with creative design to deliver exceptional digital experiences.
               </p>
             </div>
@@ -282,7 +276,7 @@ const WebDesignPage = () => {
               {features.map((feature, index) => (
                 <div 
                   key={index} 
-                  className="bg-gray-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll"
+                  className="bg-gray-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll text-left"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="flex justify-center mb-4">
@@ -298,14 +292,13 @@ const WebDesignPage = () => {
           </div>
         </section>
 
-        {/* Process Section */}
         <section id="process" className="py-20 bg-gray-50">
           <div className="container mx-auto px-6 max-w-7xl">
-            <div className="text-center mb-16 animate-on-scroll">
+            <div className="text-left mb-16 animate-on-scroll">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our <span className="text-kappa-blue">Development Process</span>
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              <p className="text-lg text-gray-600 max-w-3xl">
                 A streamlined approach to bring your digital vision to life efficiently and effectively.
               </p>
             </div>
@@ -340,7 +333,6 @@ const WebDesignPage = () => {
           </div>
         </section>
 
-        {/* Technologies Section */}
         <section className="py-20 bg-kappa-navy text-white">
           <div className="container mx-auto px-6 max-w-7xl">
             <div className="text-center mb-16 animate-on-scroll">
@@ -365,7 +357,6 @@ const WebDesignPage = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-kappa-blue to-kappa-accent">
           <div className="container mx-auto px-6 max-w-7xl">
             <div className="text-center max-w-3xl mx-auto animate-on-scroll">
