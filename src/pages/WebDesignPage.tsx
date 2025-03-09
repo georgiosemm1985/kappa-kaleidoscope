@@ -179,13 +179,13 @@ const WebDesignPage = () => {
           </div>
         </header>
 
-        <section className="py-20 bg-gradient-to-b from-kappa-dark-navy to-kappa-dark-blue">
+        <section className="py-20 bg-white text-gray-900">
           <div className="container mx-auto px-6 max-w-7xl">
             <div className="text-left mb-16 animate-on-scroll">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Building for <span className="text-kappa-accent">All Platforms</span>
               </h2>
-              <p className="text-lg text-white/80 max-w-3xl">
+              <p className="text-lg text-gray-700 max-w-3xl">
                 Our expertise spans across all major platforms, ensuring your digital presence is consistent and powerful wherever your users are.
               </p>
             </div>
@@ -194,14 +194,14 @@ const WebDesignPage = () => {
               {platforms.map((platform, index) => (
                 <div 
                   key={index} 
-                  className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl p-6 text-left text-white hover:transform hover:scale-105 transition-all duration-300 animate-on-scroll"
+                  className="bg-gray-50 backdrop-blur-lg border border-gray-200 rounded-xl p-6 text-left text-gray-900 hover:transform hover:scale-105 transition-all duration-300 animate-on-scroll shadow-md"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="flex justify-center mb-4">
                     {platform.icon}
                   </div>
-                  <h3 className="text-xl font-bold mb-2 text-white">{platform.title}</h3>
-                  <p className="text-white/70">{platform.description}</p>
+                  <h3 className="text-xl font-bold mb-2 text-gray-900">{platform.title}</h3>
+                  <p className="text-gray-700">{platform.description}</p>
                 </div>
               ))}
             </div>
