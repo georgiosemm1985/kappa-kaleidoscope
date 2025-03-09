@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -26,7 +27,7 @@ const Navbar = () => {
   };
 
   const navLinks = [
-    { name: "Services", href: "#services" },
+    { name: "Services", href: "/services" },
     { name: "About", href: "#about" },
     { name: "Work", href: "#portfolio" },
     { name: "Contact", href: "#contact" }
@@ -43,23 +44,33 @@ const Navbar = () => {
       <div className="container mx-auto px-6 max-w-7xl">
         <nav className="flex justify-between items-center">
           <div className="flex-shrink-0">
-            <a href="#" className="flex items-center">
+            <Link to="/" className="flex items-center">
               <span className="text-2xl font-bold font-display text-white">
                 Kappa<span className="text-kappa-accent">Digital</span>
               </span>
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="text-white font-medium hover:text-kappa-accent transition-colors duration-300"
-              >
-                {link.name}
-              </a>
+              link.href.startsWith('/') ? (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  className="text-white font-medium hover:text-kappa-accent transition-colors duration-300"
+                >
+                  {link.name}
+                </Link>
+              ) : (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="text-white font-medium hover:text-kappa-accent transition-colors duration-300"
+                >
+                  {link.name}
+                </a>
+              )
             ))}
           </div>
 
@@ -89,14 +100,25 @@ const Navbar = () => {
           <div className="md:hidden absolute top-full left-0 right-0 bg-black/70 backdrop-blur-xl shadow-md border-b border-white/10 animate-scale-in">
             <div className="flex flex-col py-4 px-6 space-y-4">
               {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className="text-white font-medium hover:text-kappa-accent transition-colors duration-300 py-2"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {link.name}
-                </a>
+                link.href.startsWith('/') ? (
+                  <Link
+                    key={link.name}
+                    to={link.href}
+                    className="text-white font-medium hover:text-kappa-accent transition-colors duration-300 py-2"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {link.name}
+                  </Link>
+                ) : (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    className="text-white font-medium hover:text-kappa-accent transition-colors duration-300 py-2"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {link.name}
+                  </a>
+                )
               ))}
               <a
                 href="#contact"
