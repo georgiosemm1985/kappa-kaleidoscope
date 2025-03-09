@@ -235,7 +235,7 @@ const EcommerceSolutionsPage = () => {
                   Our Packages
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-                  E-commerce <span className="bg-gradient-to-r from-orange-400 to-pink-500 text-transparent bg-clip-text">Solutions</span> Packages
+                  E-commerce <span className="bg-gradient-to-r from-orange-400 to-pink-500 text-transparent bg-clip-text">Packages</span>
                 </h2>
                 <p className="text-lg text-white/80">
                   Tailored solutions to match your business size, goals, and budget with transparent deliverables and exceptional support.
