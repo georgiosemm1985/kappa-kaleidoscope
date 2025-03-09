@@ -91,6 +91,10 @@ const Portfolio = () => {
     ? projects 
     : projects.filter(project => project.category === activeFilter);
   
+  const handleFilterClick = (filterId) => {
+    setActiveFilter(filterId);
+  };
+  
   return (
     <section id="portfolio" className="section-padding bg-kappa-gray">
       <div className="container mx-auto px-6 max-w-7xl">
@@ -110,7 +114,7 @@ const Portfolio = () => {
           {filters.map((filter) => (
             <button
               key={filter.id}
-              onClick={() => setActiveFilter(filter.id)}
+              onClick={() => handleFilterClick(filter.id)}
               className={`px-5 py-2 rounded-full transition-all duration-300 ${
                 activeFilter === filter.id
                   ? 'bg-kappa-blue text-white'
