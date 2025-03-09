@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -238,7 +237,7 @@ const EcommerceSolutionsPage = () => {
                   E-commerce <span className="text-gradient-orange">Solutions</span> Packages
                 </h2>
                 <p className="text-lg text-gray-600">
-                  Tailored packages to match your business size, goals, and budget with transparent pricing and clear deliverables.
+                  Tailored solutions to match your business size, goals, and budget with transparent deliverables and exceptional support.
                 </p>
               </div>
               
@@ -246,7 +245,6 @@ const EcommerceSolutionsPage = () => {
                 {[
                   {
                     title: "Starter Store",
-                    price: "$2,499",
                     description: "Perfect for small businesses looking to establish their online presence quickly.",
                     features: [
                       "Shopify or WooCommerce setup",
@@ -259,7 +257,6 @@ const EcommerceSolutionsPage = () => {
                   },
                   {
                     title: "Growth Package",
-                    price: "$4,999",
                     description: "For growing businesses that need advanced features and customizations.",
                     features: [
                       "Custom design & development",
@@ -274,7 +271,6 @@ const EcommerceSolutionsPage = () => {
                   },
                   {
                     title: "Enterprise Solution",
-                    price: "Custom",
                     description: "Comprehensive solution for large businesses with complex requirements.",
                     features: [
                       "Fully custom design & development",
@@ -292,11 +288,7 @@ const EcommerceSolutionsPage = () => {
                       <div className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-orange-400 to-pink-500"></div>
                     )}
                     <div className={`p-8 ${pkg.featured ? 'bg-gradient-to-br from-orange-50 to-pink-50' : 'bg-white'}`}>
-                      <h3 className="text-2xl font-bold mb-2 text-kappa-dark-navy">{pkg.title}</h3>
-                      <div className="flex items-baseline mb-6">
-                        <span className="text-3xl font-bold text-kappa-blue">{pkg.price}</span>
-                        {pkg.price !== "Custom" && <span className="ml-1 text-gray-500">/ one-time</span>}
-                      </div>
+                      <h3 className="text-2xl font-bold mb-4 text-kappa-dark-navy">{pkg.title}</h3>
                       <p className="text-gray-600 mb-6">{pkg.description}</p>
                       <ul className="space-y-3 mb-8">
                         {pkg.features.map((feature, j) => (
@@ -306,6 +298,9 @@ const EcommerceSolutionsPage = () => {
                           </li>
                         ))}
                       </ul>
+                      <div className="text-center mb-4">
+                        <span className="text-lg font-medium text-kappa-blue">Contact us for pricing</span>
+                      </div>
                       <button className="flex items-center justify-center w-full py-3 px-6 rounded-lg bg-gradient-to-r from-orange-500 to-pink-500 text-white font-medium hover:from-orange-600 hover:to-pink-600 transition-colors duration-300">
                         <span>Get Started</span>
                         <ArrowRight className="h-5 w-5 ml-2" />
