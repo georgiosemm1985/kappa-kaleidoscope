@@ -36,8 +36,8 @@ const Navbar = () => {
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'py-3 blur-backdrop shadow-md' 
-          : 'py-5 bg-kappa-navy text-white'
+          ? 'py-3 bg-black/40 backdrop-blur-xl shadow-md border-b border-white/10' 
+          : 'py-5 bg-transparent'
       }`}
     >
       <div className="container mx-auto px-6 max-w-7xl">
@@ -86,7 +86,7 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 blur-backdrop shadow-md animate-scale-in bg-kappa-navy/90">
+          <div className="md:hidden absolute top-full left-0 right-0 bg-black/70 backdrop-blur-xl shadow-md border-b border-white/10 animate-scale-in">
             <div className="flex flex-col py-4 px-6 space-y-4">
               {navLinks.map((link) => (
                 <a
