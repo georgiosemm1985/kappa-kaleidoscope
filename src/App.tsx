@@ -11,6 +11,7 @@ import { Toaster } from '@/components/ui/toaster';
 import './App.css';
 import WebDesignPage from './pages/WebDesignPage';
 import DigitalMarketingPage from './pages/DigitalMarketingPage';
+import SeoOptimizationPage from './pages/SeoOptimizationPage';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/services/web-design" element={<WebDesignPage />} />
         <Route path="/services/digital-marketing" element={<DigitalMarketingPage />} />
+        <Route path="/services/seo" element={<SeoOptimizationPage />} />
         <Route path="/work" element={<WorkPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="*" element={<NotFound />} />
