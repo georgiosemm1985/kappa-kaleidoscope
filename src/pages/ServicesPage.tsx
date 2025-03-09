@@ -9,6 +9,9 @@ const ServicesPage = () => {
     // Scroll to top when the page loads
     window.scrollTo(0, 0);
     
+    // Set the body background to match our dark theme
+    document.body.style.backgroundColor = '#0A1128';
+    
     // Intersection Observer for scroll animations
     const observer = new IntersectionObserver(
       (entries) => {
@@ -27,6 +30,8 @@ const ServicesPage = () => {
     });
     
     return () => {
+      // Clean up the background color when unmounting
+      document.body.style.backgroundColor = '';
       elements.forEach((el) => {
         observer.unobserve(el);
       });
@@ -34,7 +39,7 @@ const ServicesPage = () => {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-kappa-navy">
       <Navbar />
       <div className="pt-20 md:pt-24"> {/* Add padding to account for the fixed navbar */}
         <header className="bg-gradient-to-r from-kappa-blue to-kappa-accent text-white py-16 md:py-24">

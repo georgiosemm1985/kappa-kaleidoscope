@@ -1,11 +1,12 @@
 
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,6 +18,9 @@ const Navbar = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
+    // Trigger scroll handler on mount to set correct initial state
+    handleScroll();
+    
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
