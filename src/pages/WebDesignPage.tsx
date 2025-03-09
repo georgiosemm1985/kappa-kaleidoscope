@@ -12,6 +12,7 @@ import {
   Check,
   ArrowRight
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { motion } from 'framer-motion';
@@ -160,12 +161,12 @@ const WebDesignPage = () => {
                   We create stunning, high-performance digital experiences that drive business growth across all platforms.
                 </p>
                 <div className="flex flex-wrap gap-4">
-                  <a href="#contact" className="px-6 py-3 bg-kappa-accent text-white font-medium rounded-lg hover:bg-kappa-accent/90 transition-colors">
-                    Get Started
-                  </a>
-                  <a href="#process" className="px-6 py-3 bg-white/10 text-white font-medium rounded-lg hover:bg-white/20 transition-colors">
-                    Our Process
-                  </a>
+                  <Link to="/contact" className="px-6 py-3 bg-kappa-accent text-white font-medium rounded-lg hover:bg-kappa-accent/90 transition-colors">
+                    Get Started <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                  <Link to="/work" className="px-6 py-3 bg-white/10 text-white font-medium rounded-lg hover:bg-white/20 transition-colors">
+                    Our Work <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
                 </div>
               </div>
               <div className="animate-on-scroll hidden md:block">
@@ -250,9 +251,14 @@ const WebDesignPage = () => {
                     <span className="text-white/80">Data analysis and predictive analytics for business insights</span>
                   </li>
                 </ul>
-                <a href="#contact" className="inline-flex items-center px-6 py-3 bg-kappa-accent text-white font-medium rounded-lg hover:bg-kappa-accent/90 transition-colors">
-                  Learn More <ArrowRight className="ml-2 h-4 w-4" />
-                </a>
+                <div className="flex flex-wrap gap-4">
+                  <Link to="/contact" className="inline-flex items-center px-6 py-3 bg-kappa-accent text-white font-medium rounded-lg hover:bg-kappa-accent/90 transition-colors">
+                    Contact Us <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                  <Link to="/work" className="inline-flex items-center px-6 py-3 bg-white/10 text-white font-medium rounded-lg hover:bg-white/20 transition-colors">
+                    View Our Work <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
