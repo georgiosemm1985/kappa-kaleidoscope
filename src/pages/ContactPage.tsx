@@ -9,8 +9,8 @@ const ContactPage = () => {
     // Scroll to top when the page loads
     window.scrollTo(0, 0);
     
-    // Set the body background to match our theme
-    document.body.style.backgroundColor = '#FFFFFF';
+    // Set the body background to match our dark theme
+    document.body.style.backgroundColor = '#0A1128';
     
     // Intersection Observer for scroll animations
     const observer = new IntersectionObserver(
@@ -39,14 +39,14 @@ const ContactPage = () => {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen bg-white">
+    <div className="flex flex-col min-h-screen bg-kappa-dark-navy">
       <Navbar />
       <div className="pt-20 md:pt-24"> {/* Add padding to account for the fixed navbar */}
-        <header className="relative min-h-[40vh] flex items-center pt-16 overflow-hidden bg-kappa-blue text-white">
+        <header className="relative min-h-[50vh] flex items-center pt-20 overflow-hidden bg-kappa-dark-navy text-white">
           {/* Background Decorations */}
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute -top-20 -right-20 w-96 h-96 bg-kappa-accent/20 rounded-full blur-3xl opacity-70 parallax" data-speed="0.03"></div>
-            <div className="absolute top-1/3 -left-20 w-80 h-80 bg-white/10 rounded-full blur-3xl opacity-60 parallax" data-speed="0.05"></div>
+            <div className="absolute top-1/3 -left-20 w-80 h-80 bg-kappa-blue/20 rounded-full blur-3xl opacity-60 parallax" data-speed="0.05"></div>
             <div className="absolute -bottom-20 right-1/4 w-72 h-72 bg-kappa-accent/20 rounded-full blur-3xl opacity-60 parallax" data-speed="0.04"></div>
           </div>
           
@@ -56,7 +56,7 @@ const ContactPage = () => {
                 <span className="mr-2">📩</span> Get in Touch
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-on-scroll">
-                Let's <span className="bg-gradient-to-r from-white to-kappa-accent text-transparent bg-clip-text">Connect</span>
+                Let's <span className="bg-gradient-to-r from-blue-400 to-kappa-accent text-transparent bg-clip-text">Connect</span>
               </h1>
               <p className="text-lg md:text-xl text-white/90 mb-8 animate-on-scroll">
                 Have a project in mind? We're here to help you bring your digital vision to life.
