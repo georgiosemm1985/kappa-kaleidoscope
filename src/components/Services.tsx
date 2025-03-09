@@ -7,12 +7,10 @@ import {
   Search, 
   ShoppingCart, 
   Smartphone, 
-  Share2, 
   BarChart4, 
   CheckCircle,
   ArrowRight,
-  Sparkles,
-  Zap
+  Sparkles
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -165,79 +163,6 @@ const Services = () => {
           ))}
         </div>
         
-        {/* Process Section */}
-        <div className="mt-24 mb-16">
-          <div className="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
-            <span className="inline-block px-4 py-2 rounded-full bg-kappa-lightblue text-kappa-blue text-sm font-medium mb-4">
-              Our Process
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              How we bring your vision to <span className="text-gradient">life</span>
-            </h2>
-            <p className="text-lg text-gray-600">
-              Our proven approach ensures your project is delivered on time, on budget, and exceeds expectations.
-            </p>
-          </div>
-          
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-kappa-blue to-kappa-accent hidden md:block"></div>
-            
-            {/* Process steps */}
-            <div className="space-y-12 md:space-y-0 relative">
-              {[
-                {
-                  number: "01",
-                  title: "Discovery & Planning",
-                  description: "We dive deep to understand your business, goals, and target audience to create a strategic roadmap.",
-                  icon: <Search className="h-8 w-8 text-white" />
-                },
-                {
-                  number: "02",
-                  title: "Design & Prototyping",
-                  description: "Our creative team crafts stunning visuals and intuitive user experiences that align with your brand.",
-                  icon: <Code className="h-8 w-8 text-white" />
-                },
-                {
-                  number: "03",
-                  title: "Development & Testing",
-                  description: "Expert developers bring designs to life with clean, efficient code followed by thorough testing.",
-                  icon: <Zap className="h-8 w-8 text-white" />
-                },
-                {
-                  number: "04",
-                  title: "Deployment & Support",
-                  description: "We handle the launch and provide ongoing support to ensure continued success.",
-                  icon: <Share2 className="h-8 w-8 text-white" />
-                }
-              ].map((step, index) => (
-                <div key={index} className={`md:flex ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center animate-on-scroll`}
-                  style={{ animationDelay: `${0.2 * index}s` }}>
-                  <div className={`md:w-1/2 p-6 ${index % 2 === 0 ? 'md:text-right md:pr-16' : 'md:text-left md:pl-16'}`}>
-                    <div className={`inline-block font-bold text-5xl bg-clip-text text-transparent bg-gradient-to-r from-kappa-blue to-kappa-accent mb-4`}>
-                      {step.number}
-                    </div>
-                    <h3 className="text-2xl font-bold mb-3">{step.title}</h3>
-                    <p className="text-gray-600">{step.description}</p>
-                  </div>
-                  
-                  <div className="hidden md:flex items-center justify-center">
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-r from-kappa-blue to-kappa-accent flex items-center justify-center z-10">
-                      {step.icon}
-                    </div>
-                  </div>
-                  
-                  <div className="md:w-1/2 p-6 md:hidden">
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-r from-kappa-blue to-kappa-accent flex items-center justify-center mb-4">
-                      {step.icon}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-        
         {/* CTA Banner */}
         <div className="mt-24 animate-on-scroll">
           <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-kappa-blue to-kappa-accent p-8 md:p-12">
@@ -266,4 +191,3 @@ const Services = () => {
 };
 
 export default Services;
-

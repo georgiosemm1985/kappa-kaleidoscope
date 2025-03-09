@@ -39,14 +39,24 @@ const ServicesPage = () => {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen bg-kappa-navy">
+    <div className="flex flex-col min-h-screen bg-kappa-dark-navy">
       <Navbar />
       <div className="pt-20 md:pt-24"> {/* Add padding to account for the fixed navbar */}
-        <header className="bg-gradient-to-r from-kappa-blue to-kappa-accent text-white py-16 md:py-24">
-          <div className="container mx-auto px-6 max-w-7xl">
-            <div className="max-w-3xl">
+        <header className="relative min-h-[50vh] flex items-center pt-20 overflow-hidden bg-kappa-dark-navy text-white">
+          {/* Background Decorations - matching the Hero component styling */}
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute -top-20 -right-20 w-96 h-96 bg-kappa-accent/20 rounded-full blur-3xl opacity-70 parallax" data-speed="0.03"></div>
+            <div className="absolute top-1/3 -left-20 w-80 h-80 bg-kappa-blue/20 rounded-full blur-3xl opacity-60 parallax" data-speed="0.05"></div>
+            <div className="absolute -bottom-20 right-1/4 w-72 h-72 bg-kappa-accent/20 rounded-full blur-3xl opacity-60 parallax" data-speed="0.04"></div>
+          </div>
+          
+          <div className="container mx-auto px-6 max-w-7xl relative z-10">
+            <div className="max-w-3xl animate-on-scroll">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white text-sm font-medium mb-6 animate-fade-in">
+                <span className="mr-2">🚀</span> Premium Digital Services
+              </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-on-scroll">
-                Our Services
+                Our <span className="bg-gradient-to-r from-blue-400 to-kappa-accent text-transparent bg-clip-text">Services</span>
               </h1>
               <p className="text-lg md:text-xl text-white/90 mb-8 animate-on-scroll">
                 Comprehensive digital solutions tailored to elevate your business and drive measurable results.
