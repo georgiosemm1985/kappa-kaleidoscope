@@ -67,8 +67,16 @@
     @apply bg-white/40 backdrop-filter backdrop-blur-md shadow-lg border border-white/20;
   }
   
+  .dark-glass-card {
+    @apply bg-white/10 backdrop-filter backdrop-blur-md shadow-lg border border-white/20;
+  }
+  
   .text-gradient {
     @apply bg-gradient-to-r from-kappa-blue to-kappa-accent text-transparent bg-clip-text;
+  }
+  
+  .text-gradient-dark {
+    @apply bg-gradient-to-r from-blue-400 to-kappa-accent text-transparent bg-clip-text;
   }
   
   .section-padding {
@@ -99,6 +107,15 @@
 
 .btn-outline {
   @apply inline-flex items-center justify-center px-6 py-3 text-base font-medium text-kappa-blue bg-transparent rounded-md border border-kappa-blue transition-all duration-300 hover:bg-kappa-lightblue hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-kappa-accent focus:ring-offset-2;
+}
+
+/* Dark section button styles */
+.btn-primary-dark {
+  @apply inline-flex items-center justify-center px-6 py-3 text-base font-medium text-kappa-dark-navy bg-white rounded-md shadow-md transition-all duration-300 hover:bg-kappa-lightblue hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-kappa-accent focus:ring-offset-2;
+}
+
+.btn-outline-dark {
+  @apply inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-transparent rounded-md border border-white transition-all duration-300 hover:bg-white/10 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-kappa-accent focus:ring-offset-2;
 }
 
 /* Scroll Animations */
