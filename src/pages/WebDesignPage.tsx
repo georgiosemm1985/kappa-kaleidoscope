@@ -201,8 +201,10 @@ const WebDesignPage = () => {
                   className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl p-6 text-white hover:transform hover:scale-105 transition-all duration-300 animate-on-scroll"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  {platform.icon}
-                  <h3 className="text-xl font-bold mb-2">{platform.title}</h3>
+                  <div className="flex justify-center mb-4">
+                    {platform.icon}
+                  </div>
+                  <h3 className="text-xl font-bold mb-2 text-white">{platform.title}</h3>
                   <p className="text-white/70">{platform.description}</p>
                 </div>
               ))}
@@ -283,8 +285,10 @@ const WebDesignPage = () => {
                   className="bg-gray-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className="p-3 bg-kappa-lightblue inline-block rounded-lg mb-4">
-                    {feature.icon}
+                  <div className="flex justify-center mb-4">
+                    <div className="p-3 bg-kappa-lightblue inline-block rounded-lg">
+                      {feature.icon}
+                    </div>
                   </div>
                   <h3 className="text-xl font-bold mb-2 text-gray-900">{feature.title}</h3>
                   <p className="text-gray-600">{feature.description}</p>
