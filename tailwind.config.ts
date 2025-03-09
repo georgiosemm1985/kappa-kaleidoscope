@@ -31,6 +31,12 @@ export default {
 					lightblue: '#E3F2FD',
 					accent: '#3D5AFE',
 					gray: '#F5F7FA',
+					dark: {
+						navy: '#050914',
+						blue: '#0A2D66',
+						accent: '#2A3EAE',
+						gray: '#1A1F2C',
+					}
 				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',

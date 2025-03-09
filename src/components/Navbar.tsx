@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import ThemeToggle from './ThemeToggle';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,14 +38,14 @@ const Navbar = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
           ? 'py-3 blur-backdrop shadow-md' 
-          : 'py-5 bg-transparent'
+          : 'py-5 bg-transparent dark:bg-kappa-dark-navy/70'
       }`}
     >
       <div className="container mx-auto px-6 max-w-7xl">
         <nav className="flex justify-between items-center">
           <div className="flex-shrink-0">
             <a href="#" className="flex items-center">
-              <span className="text-2xl font-bold font-display text-kappa-navy">
+              <span className="text-2xl font-bold font-display text-kappa-navy dark:text-white">
                 Kappa<span className="text-kappa-accent">Digital</span>
               </span>
             </a>
@@ -56,14 +57,15 @@ const Navbar = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-kappa-navy font-medium hover:text-kappa-accent transition-colors duration-300"
+                className="text-kappa-navy font-medium hover:text-kappa-accent transition-colors duration-300 dark:text-white dark:hover:text-kappa-accent"
               >
                 {link.name}
               </a>
             ))}
           </div>
 
-          <div className="hidden md:block">
+          <div className="hidden md:flex items-center space-x-4">
+            <ThemeToggle />
             <a
               href="#contact"
               className="btn-primary"
@@ -73,10 +75,11 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center space-x-4">
+            <ThemeToggle />
             <button
               onClick={toggleMenu}
-              className="text-kappa-navy hover:text-kappa-accent transition-colors p-2"
+              className="text-kappa-navy hover:text-kappa-accent transition-colors p-2 dark:text-white"
               aria-label="Toggle menu"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -86,13 +89,13 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 blur-backdrop shadow-md animate-scale-in">
+          <div className="md:hidden absolute top-full left-0 right-0 blur-backdrop shadow-md animate-scale-in dark:bg-kappa-dark-navy/90">
             <div className="flex flex-col py-4 px-6 space-y-4">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-kappa-navy font-medium hover:text-kappa-accent transition-colors duration-300 py-2"
+                  className="text-kappa-navy font-medium hover:text-kappa-accent transition-colors duration-300 py-2 dark:text-white dark:hover:text-kappa-accent"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.name}
