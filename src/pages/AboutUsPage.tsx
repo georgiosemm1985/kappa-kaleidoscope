@@ -51,7 +51,7 @@ const AboutUsPage = () => {
             <div className="absolute -bottom-20 right-1/4 w-72 h-72 bg-kappa-accent/20 rounded-full blur-3xl opacity-60 parallax" data-speed="0.04"></div>
           </div>
           
-          <div className="container mx-auto px-6 max-w-7xl relative z-10">
+          <div className="container mx-auto px-6 max-w-7xl relative z-10 text-left">
             <div className="max-w-3xl animate-on-scroll">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white text-sm font-medium mb-6 animate-fade-in">
                 <span className="mr-2">✨</span> Who We Are

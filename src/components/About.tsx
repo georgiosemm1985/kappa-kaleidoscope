@@ -36,7 +36,7 @@ const About = () => {
   
   return (
     <section id="about" className="section-padding">
-      <div className="container mx-auto px-6 max-w-7xl">
+      <div className="container mx-auto px-6 max-w-7xl text-left">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1">
             <div className="relative">
