@@ -161,11 +161,13 @@ const WebDesignPage = () => {
                   We create stunning, high-performance digital experiences that drive business growth across all platforms.
                 </p>
                 <div className="flex flex-wrap gap-4">
-                  <Link to="/contact" className="px-6 py-3 bg-kappa-accent text-white font-medium rounded-lg hover:bg-kappa-accent/90 transition-colors">
-                    Get Started <ArrowRight className="ml-2 h-4 w-4" />
+                  <Link to="/contact" className="flex items-center justify-center px-6 py-3 bg-kappa-accent text-white font-medium rounded-lg hover:bg-kappa-accent/90 transition-colors">
+                    <span>Get Started</span>
+                    <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
-                  <Link to="/work" className="px-6 py-3 bg-white/10 text-white font-medium rounded-lg hover:bg-white/20 transition-colors">
-                    Our Work <ArrowRight className="ml-2 h-4 w-4" />
+                  <Link to="/work" className="flex items-center justify-center px-6 py-3 bg-white/10 text-white font-medium rounded-lg hover:bg-white/20 transition-colors">
+                    <span>Our Work</span>
+                    <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </div>
               </div>
@@ -252,11 +254,13 @@ const WebDesignPage = () => {
                   </li>
                 </ul>
                 <div className="flex flex-wrap gap-4">
-                  <Link to="/contact" className="inline-flex items-center px-6 py-3 bg-kappa-accent text-white font-medium rounded-lg hover:bg-kappa-accent/90 transition-colors">
-                    Contact Us <ArrowRight className="ml-2 h-4 w-4" />
+                  <Link to="/contact" className="flex items-center justify-center px-6 py-3 bg-kappa-accent text-white font-medium rounded-lg hover:bg-kappa-accent/90 transition-colors">
+                    <span>Contact Us</span>
+                    <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
-                  <Link to="/work" className="inline-flex items-center px-6 py-3 bg-white/10 text-white font-medium rounded-lg hover:bg-white/20 transition-colors">
-                    View Our Work <ArrowRight className="ml-2 h-4 w-4" />
+                  <Link to="/work" className="flex items-center justify-center px-6 py-3 bg-white/10 text-white font-medium rounded-lg hover:bg-white/20 transition-colors">
+                    <span>View Our Work</span>
+                    <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </div>
               </div>
@@ -372,9 +376,10 @@ const WebDesignPage = () => {
               <p className="text-xl text-white/90 mb-8">
                 Let's collaborate to create something extraordinary that drives real business results.
               </p>
-              <a href="/contact" className="inline-block px-8 py-4 bg-white text-kappa-blue rounded-lg font-bold hover:bg-kappa-lightblue transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                Get Started Today
-              </a>
+              <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-white text-kappa-blue rounded-lg font-bold hover:bg-kappa-lightblue transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                <span>Get Started Today</span>
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
             </div>
           </div>
         </section>

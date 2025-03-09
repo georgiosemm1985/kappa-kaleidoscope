@@ -58,3 +58,16 @@ h1, h2, h3, h4, h5, h6 {
 .bg-gray-50 h6 {
   color: rgba(10, 17, 40, 0.95);
 }
+
+/* Button styles with icons */
+a[class*="flex items-center"],
+button[class*="flex items-center"] {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1.2;
+}
+
+a[class*="flex items-center"] svg,
+button[class*="flex items-center"] svg {
+  flex-shrink: 0;
+}
