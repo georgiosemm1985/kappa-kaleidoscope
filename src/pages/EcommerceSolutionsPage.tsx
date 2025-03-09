@@ -284,23 +284,23 @@ const EcommerceSolutionsPage = () => {
                     ]
                   }
                 ].map((pkg, i) => (
-                  <div key={i} className={`relative rounded-2xl overflow-hidden transition-all duration-300 ${pkg.featured ? 'transform hover:scale-105 shadow-xl' : 'bg-white/5 hover:bg-white/10 backdrop-blur-sm hover:shadow-lg'}`}>
+                  <div key={i} className={`relative rounded-2xl overflow-hidden transition-all duration-300 ${pkg.featured ? 'transform hover:scale-105 shadow-xl bg-white' : 'bg-white shadow-md hover:shadow-xl'}`}>
                     {pkg.featured && (
                       <div className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-orange-400 to-pink-500"></div>
                     )}
-                    <div className={`p-8 ${pkg.featured ? 'bg-white/10 backdrop-blur-md' : ''}`}>
-                      <h3 className="text-2xl font-bold mb-4 text-white">{pkg.title}</h3>
-                      <p className="text-white/80 mb-6">{pkg.description}</p>
+                    <div className={`p-8`}>
+                      <h3 className="text-2xl font-bold mb-4 text-kappa-dark-navy">{pkg.title}</h3>
+                      <p className="text-gray-600 mb-6">{pkg.description}</p>
                       <ul className="space-y-3 mb-8">
                         {pkg.features.map((feature, j) => (
                           <li key={j} className="flex items-start">
-                            <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0 mr-2" />
-                            <span className="text-white/90">{feature}</span>
+                            <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mr-2" />
+                            <span className="text-gray-700">{feature}</span>
                           </li>
                         ))}
                       </ul>
                       <div className="text-center mb-4">
-                        <span className="text-lg font-medium text-orange-300">Contact us for pricing</span>
+                        <span className="text-lg font-medium text-orange-500">Contact us for pricing</span>
                       </div>
                       <button className="flex items-center justify-center w-full py-3 px-6 rounded-lg bg-gradient-to-r from-orange-500 to-pink-500 text-white font-medium hover:from-orange-600 hover:to-pink-600 transition-colors duration-300">
                         <span>Get Started</span>
