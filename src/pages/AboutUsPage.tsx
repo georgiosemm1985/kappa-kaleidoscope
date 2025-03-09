@@ -3,14 +3,15 @@ import React, { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import About from '../components/About';
+import Process from '../components/Process';
 
 const AboutUsPage = () => {
   useEffect(() => {
     // Scroll to top when the page loads
     window.scrollTo(0, 0);
     
-    // Set the body background to match our dark theme
-    document.body.style.backgroundColor = '#0A1128';
+    // We'll remove the dark background color setting
+    // document.body.style.backgroundColor = '#0A1128';
     
     // Intersection Observer for scroll animations
     const observer = new IntersectionObserver(
@@ -30,8 +31,7 @@ const AboutUsPage = () => {
     });
     
     return () => {
-      // Clean up the background color when unmounting
-      document.body.style.backgroundColor = '';
+      // Clean up when unmounting
       elements.forEach((el) => {
         observer.unobserve(el);
       });
@@ -39,7 +39,7 @@ const AboutUsPage = () => {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen bg-kappa-dark-navy">
+    <div className="flex flex-col min-h-screen">
       <Navbar />
       <div className="pt-20 md:pt-24"> {/* Add padding to account for the fixed navbar */}
         <header className="relative min-h-[50vh] flex items-center pt-20 overflow-hidden bg-kappa-dark-navy text-white">
@@ -64,7 +64,10 @@ const AboutUsPage = () => {
             </div>
           </div>
         </header>
-        <About />
+        <div className="bg-white">
+          <About />
+          <Process />
+        </div>
       </div>
       <Footer />
     </div>
