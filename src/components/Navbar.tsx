@@ -67,7 +67,7 @@ const Navbar = () => {
 
   const serviceItems = [
     { name: "Web Design & Development", href: "/services/web-design", icon: Laptop },
-    { name: "Digital Marketing", href: "/services#digital-marketing", icon: TrendingUp },
+    { name: "Digital Marketing", href: "/services/digital-marketing", icon: TrendingUp },
     { name: "SEO Optimization", href: "/services#seo", icon: Search },
     { name: "E-commerce Solutions", href: "/services#ecommerce", icon: ShoppingCart },
     { name: "Mobile App Development", href: "/services#mobile-app", icon: Smartphone },
