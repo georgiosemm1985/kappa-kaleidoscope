@@ -74,7 +74,7 @@ const Process = () => {
           {/* Connecting line */}
           <div className="absolute top-0 bottom-0 left-1/2 w-0.5 bg-kappa-lightblue hidden md:block"></div>
           
-          <div className="space-y-24 md:space-y-36 relative z-10">
+          <div className="space-y-16 md:space-y-24 relative z-10">
             {processSteps.map((step, index) => (
               <div 
                 key={index}
