@@ -10,15 +10,6 @@ import Footer from '../components/Footer';
 
 const Index = () => {
   useEffect(() => {
-    // Initialize theme from localStorage or system preference
-    const savedTheme = localStorage.getItem('kappa-theme');
-    if (savedTheme === 'dark' || 
-      (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-    
     // Intersection Observer for scroll animations
     const observer = new IntersectionObserver(
       (entries) => {

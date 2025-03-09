@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 @tailwind base;
@@ -37,36 +38,6 @@
     --radius: 0.5rem;
   }
 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 5.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 5.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 243 75% 59%;
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 221 83% 53%;
-    --accent-foreground: 0 0% 100%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 243 75% 59%;
-  }
-
   * {
     @apply border-border;
   }
@@ -89,15 +60,15 @@
   }
 
   .blur-backdrop {
-    @apply bg-white/70 backdrop-filter backdrop-blur-lg dark:bg-kappa-dark-navy/70;
+    @apply bg-white/70 backdrop-filter backdrop-blur-lg;
   }
   
   .glass-card {
-    @apply bg-white/40 backdrop-filter backdrop-blur-md shadow-lg border border-white/20 dark:bg-kappa-dark-navy/40 dark:border-white/10;
+    @apply bg-white/40 backdrop-filter backdrop-blur-md shadow-lg border border-white/20;
   }
   
   .text-gradient {
-    @apply bg-gradient-to-r from-kappa-blue to-kappa-accent text-transparent bg-clip-text dark:from-blue-400 dark:to-purple-400;
+    @apply bg-gradient-to-r from-kappa-blue to-kappa-accent text-transparent bg-clip-text;
   }
   
   .section-padding {
@@ -119,15 +90,15 @@
 
 /* Custom button styles */
 .btn-primary {
-  @apply inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-kappa-blue rounded-md shadow-md transition-all duration-300 hover:bg-kappa-accent hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-kappa-accent focus:ring-offset-2 dark:bg-kappa-accent dark:hover:bg-blue-500;
+  @apply inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-kappa-blue rounded-md shadow-md transition-all duration-300 hover:bg-kappa-accent hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-kappa-accent focus:ring-offset-2;
 }
 
 .btn-secondary {
-  @apply inline-flex items-center justify-center px-6 py-3 text-base font-medium text-kappa-blue bg-white rounded-md shadow-md border border-kappa-lightblue transition-all duration-300 hover:bg-kappa-lightblue hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-kappa-accent focus:ring-offset-2 dark:bg-kappa-dark-gray dark:text-white dark:border-kappa-dark-blue dark:hover:bg-kappa-dark-blue;
+  @apply inline-flex items-center justify-center px-6 py-3 text-base font-medium text-kappa-blue bg-white rounded-md shadow-md border border-kappa-lightblue transition-all duration-300 hover:bg-kappa-lightblue hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-kappa-accent focus:ring-offset-2;
 }
 
 .btn-outline {
-  @apply inline-flex items-center justify-center px-6 py-3 text-base font-medium text-kappa-blue bg-transparent rounded-md border border-kappa-blue transition-all duration-300 hover:bg-kappa-lightblue hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-kappa-accent focus:ring-offset-2 dark:text-white dark:border-white/30 dark:hover:bg-white/10;
+  @apply inline-flex items-center justify-center px-6 py-3 text-base font-medium text-kappa-blue bg-transparent rounded-md border border-kappa-blue transition-all duration-300 hover:bg-kappa-lightblue hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-kappa-accent focus:ring-offset-2;
 }
 
 /* Scroll Animations */
