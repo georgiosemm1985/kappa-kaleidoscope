@@ -1,6 +1,6 @@
 
 import { useState, useEffect, useRef } from 'react';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, Laptop, TrendingUp, Search, ShoppingCart, Smartphone, BarChart } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
@@ -66,12 +66,12 @@ const Navbar = () => {
   ];
 
   const serviceItems = [
-    { name: "Web Design & Development", href: "/services#web-design" },
-    { name: "Digital Marketing", href: "/services#digital-marketing" },
-    { name: "SEO Optimization", href: "/services#seo" },
-    { name: "E-commerce Solutions", href: "/services#ecommerce" },
-    { name: "Mobile App Development", href: "/services#mobile-app" },
-    { name: "Analytics & Reporting", href: "/services#analytics" }
+    { name: "Web Design & Development", href: "/services#web-design", icon: Laptop },
+    { name: "Digital Marketing", href: "/services#digital-marketing", icon: TrendingUp },
+    { name: "SEO Optimization", href: "/services#seo", icon: Search },
+    { name: "E-commerce Solutions", href: "/services#ecommerce", icon: ShoppingCart },
+    { name: "Mobile App Development", href: "/services#mobile-app", icon: Smartphone },
+    { name: "Analytics & Reporting", href: "/services#analytics", icon: BarChart }
   ];
 
   return (
@@ -106,13 +106,14 @@ const Navbar = () => {
                   </button>
                   
                   {servicesDropdownOpen && (
-                    <div className="absolute top-full mt-2 py-2 w-64 bg-white/10 backdrop-blur-xl border border-white/10 rounded-lg shadow-xl animate-scale-in z-50">
+                    <div className="absolute top-full mt-2 py-2 w-64 bg-black/80 backdrop-blur-xl border border-white/10 rounded-lg shadow-xl animate-scale-in z-50">
                       {serviceItems.map((service) => (
                         <Link
                           key={service.name}
                           to={service.href}
-                          className="block px-4 py-2 text-white hover:bg-white/20 transition-colors duration-200"
+                          className="flex items-center px-4 py-2 text-white hover:bg-white/20 transition-colors duration-200"
                         >
+                          <service.icon className="h-4 w-4 mr-2 text-kappa-accent" />
                           {service.name}
                         </Link>
                       ))}
@@ -173,9 +174,10 @@ const Navbar = () => {
                           <Link
                             key={service.name}
                             to={service.href}
-                            className="block py-2 text-white hover:text-kappa-accent transition-colors duration-200"
+                            className="flex items-center py-2 text-white hover:text-kappa-accent transition-colors duration-200"
                             onClick={() => setIsMenuOpen(false)}
                           >
+                            <service.icon className="h-4 w-4 mr-2 text-kappa-accent" />
                             {service.name}
                           </Link>
                         ))}
